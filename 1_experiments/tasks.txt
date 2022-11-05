@@ -1,0 +1,17 @@
+First Task
+original node attributes
+average attributes of 1-hop neighbors
+average attributes of 10-hop neighbors
+=> predict the original node label using ML
+
+Second Task
+average one-hot label vector of 1-hop neighbors
+average one-hot label vector of 10-hop neighbors
+=> pick the largest index as the predicted label
+
+Third Task
+original node attributes
+weighted average attributes of 1-hop neighbors
+weighted average of 10-hop neighbors
+=> predict the original node label using MLP
+=> how to compute weights? 1. dot product, 2. concatenation attention 3. square attention
