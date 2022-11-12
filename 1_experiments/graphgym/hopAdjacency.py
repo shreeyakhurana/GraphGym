@@ -12,7 +12,18 @@ def getAdjacency(A, k):
     return avgA
 
 
-A = [[0, 0, 0, 1], [0, 1, 1, 0], [0, 1, 0, 0], [1, 1, 0, 0]]
-k = 2
+#A = [[0, 0, 0, 1], [0, 1, 1, 0], [0, 1, 0, 0], [1, 1, 0, 0]]
+#k = 2
 
-print(getAdjacency(A, k))
+#print(getAdjacency(A, k))
+
+def allHops(A, kEnd=10):
+    avgAttributes = []
+    for h in range(kEnd):
+        avgA = getAdjacency(A, h+1)
+        #print(h+1)
+        #print(avgA)
+        avgAttributes.append(avgA)
+    return avgAttributes
+
+#allHops(A, 10)
