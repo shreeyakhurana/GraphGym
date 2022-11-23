@@ -1,7 +1,8 @@
 import torch
 import numpy as np
 
-#First Task
+#First Task - Average the Adjacency Matrix among k-hops
+#X*Ak afterwards and use that to predict the original node label
 def getAdjacency(A, k):
     Ak = np.linalg.matrix_power(A, k)
     Ak = torch.from_numpy(Ak)
@@ -15,7 +16,7 @@ def getAdjacency(A, k):
 #A = [[0, 0, 0, 1], [0, 1, 1, 0], [0, 1, 0, 0], [1, 1, 0, 0]]
 #k = 2
 
-#print(getAdjacency(A, k))
+print(getAdjacency(A, k))
 
 def allHops(A, kEnd=10):
     avgAttributes = []
